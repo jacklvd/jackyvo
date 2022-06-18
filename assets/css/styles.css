@@ -1,0 +1,161 @@
+/* General set-up */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important; 
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+div, a, .logo {
+    text-decoration: none;
+}
+
+div div span {
+    font-size: 50px;
+}
+
+/* Header set-up */
+header {
+    margin-top: 15%;
+    padding-top: 30px;
+    background-color: #897B7B;
+}
+
+/* Body set-up */
+body {
+    color: #333;
+    line-height: 1.3;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden !important; /* if the content in the nav box is too large consider adding a scroll bar */
+}
+
+/* NavBar */
+.navbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 9; /* for stack over other elements */
+}
+
+.navbar .icon-bar {
+    color: #fff;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 550;
+    color: #FFFBFB;
+    letter-spacing: .5px;
+    margin: 15px 5px;
+    /* animation when the screen size is changing */
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.navbar .navbar-nav .active {
+    color: #FFFBFB !important;
+}
+
+.nav-scroll {
+    background: #fff;
+    border-bottom: 1px solid rgba(12, 12, 12, 0.04);
+    padding: 0;
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    /* a bit of animation when the screen size is changing */
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+}
+
+.nav-scroll .icon-bar {
+    color: #222;
+}
+.nav-scroll .navbar-nav .nav-link {
+    color: whitesmoke;
+}
+
+.nav-scroll .nav-brand {
+    padding: 15px 0;
+    color: #111;
+}
+.nav-scroll .logo:hover {
+    color: burlywood;
+}
+
+.nav-scroll .navbar-nav .nav-link:hover {
+    color: burlywood;
+}
+
+.logo {
+    padding: 18px 0;
+    width: 90px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo:hover {
+    color: burlywood;
+}
+
+/* Theme/Color palette of the website */
+.custom-theme {
+    background-color: #AFA4A4;
+    color: whitesmoke;
+}
+
+.custom-theme .title:before {
+    background: #343434;
+}
+
+.custom-theme .nav-scroll {
+    background: #181818;
+}
+
+.custom-theme .nav-scroll .icon-bar {
+    color: whitesmoke;
+}
+
+.custom-theme .nav-scroll .navbar-nav .nav-link {
+    color: #D9D1D1;
+}
+
+.custom-theme .nav-scroll .logo {
+    color: #D9D1D1;
+}
+
+.custom-theme .nav-scroll .logo:hover {
+    color: burlywood;
+}
+
+.custom-theme footer {
+    background: #181818;
+}
+
+/* animation */
+/* .show-on-scroll {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0.25s ease-out, -webkit-transform 3s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    transition: opacity 0.3s 0.25s ease-out, -webkit-transform 3s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    transition: transform 3s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out;
+    transition: transform 3s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out, -webkit-transform 3s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    will-change: transform, opacity;
+} */
+
+#shuffle {
+    display: inline-block;
+}
