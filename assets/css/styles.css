@@ -29,6 +29,49 @@ hr {
     position: relative;
 }
 
+.flip-card-container {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    border: 0.25px solid pink;
+    perspective: 200px;
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateX(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #343434;
+    color: #FFFBFB;
+}
+
+.flip-card-back {
+    background-color: #AFA4A4;
+    color: #fff;
+    transform: rotateX(180deg);
+}
+
+
 /* Body set-up */
 body {
     color: #333;
@@ -59,7 +102,7 @@ body {
     letter-spacing: .5px;
     margin: 15px 5px;
     /* animation when the screen size is changing */
-    -webkit-transition: all .5s;
+    /* -webkit-transition: all .5s; */
     transition: all .5s;
 }
 
@@ -103,6 +146,10 @@ body {
     color: burlywood;
 }
 
+nav a:hover {
+    color: palegreen;
+}
+
 .logo {
     padding: 18px 0;
     width: 90px;
@@ -114,6 +161,9 @@ body {
 .logo:hover {
     color: burlywood;
 }
+
+/* footer */
+
 
 /* Theme/Color palette of the website */
 .custom-theme {
@@ -146,10 +196,12 @@ body {
 }
 
 .custom-theme footer {
-    background: #181818;
+    background: #897B7B;
 }
 
 /* animation */
 #shuffle {
     display: inline-block;
 }
+
+/* sections */
