@@ -61,7 +61,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     backface-visibility: hidden;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -78,7 +78,7 @@ hr {
     transform: rotateX(180deg) translateZ(10px);
 }
 
-#white1, #white2, #white3, #white4 {
+#white1, #white2, #white3, #white4, #white5, #white6 {
     background-color: #D9D1D1;
     color: #111;
 }
