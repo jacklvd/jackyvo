@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
 /* General set-up */
 * {
     margin: 0;
@@ -5,6 +7,7 @@
     box-sizing: border-box;
     outline: none !important; 
     list-style: none;
+    /* justify-content: center; */
 }
 
 h1, h2, h3, h4, h5, h6, .logo {
@@ -21,7 +24,7 @@ div div span {
 
 /* Header set-up */
 header {
-    margin-top: 15%;
+    margin-top: 12%;
     padding-top: 30px;
 }
 
@@ -34,15 +37,17 @@ hr {
     width: 120px;
     height: 40px;
     border: 0.25px solid pink;
-    perspective: 200px;
+    perspective: 300px;
+    /* display: inline; */
 }
 
 .flip-card {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: 1s;
     transform-style: preserve-3d;
+    transition: transform 250ms ease-in-out;
+    transform: rotateZ(-60px);
 }
 
 .flip-card-container:hover .flip-card {
@@ -56,19 +61,26 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     backface-visibility: hidden;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .flip-card-front {
-    background-color: #343434;
-    color: #FFFBFB;
+    background-color: #AFA4A4;
+    color: #D9D1D1;
+    transform: translateZ(10px);
 }
 
 .flip-card-back {
     background-color: #AFA4A4;
-    color: #fff;
-    transform: rotateX(180deg);
+    color: #D9D1D1;
+    transform: rotateX(180deg) translateZ(10px);
+}
+
+#white1, #white2, #white3, #white4 {
+    background-color: #D9D1D1;
+    color: #111;
 }
 
 
@@ -203,5 +215,3 @@ nav a:hover {
 #shuffle {
     display: inline-block;
 }
-
-/* sections */
