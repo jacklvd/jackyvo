@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,100italic,300italic,400italic,700,700italic|Roboto+Slab:400,100,300,700);
 
 /* General set-up */
 * {
@@ -23,7 +24,7 @@ div div span {
 }
 
 .section-padding {
-    padding: 100px 0;
+    padding: 100px 0px;
 }
 
 /* Body set-up */
@@ -33,6 +34,7 @@ body {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden !important; /* if the content in the nav box is too large consider adding a scroll bar */
+    /* position: relative; */
 }
 
 /* Header set-up */
@@ -205,8 +207,20 @@ span a:active {
     color: burlywood;
 }
 
-nav a:hover {
+.nav-item a:hover {
     color: palegreen;
+}
+
+.nav-item a:link {
+    color: #897B7B;
+}
+
+/* .nav-item .active { 
+    background-color: rgba(255, 255, 255, .4); 
+} */
+
+.nav-item a:visited {
+    color: #C49B66;
 }
 
 .logo {
@@ -222,9 +236,6 @@ nav a:hover {
 }
 
 /* About Me Section */
-section {
-    background-color: #C0BEB9;
-}
 
 img {
     max-width: 100%;
@@ -236,6 +247,7 @@ img {
     position: relative;
     transition: all .4s;
     -webkit-transition: all .4s;
+    z-index: 1;
 }
 
 .self .self-img:hover {
@@ -243,7 +255,7 @@ img {
 }
 
 .self .self-img:hover:after {
-    background: grey;
+    background: bisque;
     left: 5px;
     top: -15px;
     right: 15px;
@@ -252,7 +264,7 @@ img {
 
 .self .self-img:after {
     content: '';
-    background: #f5f5f5;
+    background: #C0BEB9;
     position: absolute;
     left: 15px;
     right: 5px;
@@ -283,7 +295,7 @@ img {
     cursor: pointer;
     -webkit-transition: all .5s;
     transition: all .5s;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 .self .content .social-icon span:hover {
@@ -295,6 +307,111 @@ img {
 .self .content {
     margin-top: 30px;
 }
+
+/* Experiences */
+/* .CV-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2em;
+    color: #222222;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  @media all and (max-width: 500px) {
+    .CV-page {
+      padding: 0 1em;
+    }
+  }
+  /* if IE<=7 */
+  
+  /* .CV-page\ {
+    width: 1100px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+  }
+  
+  .CV-secondaryHeading {
+    position: relative;
+    margin: 2em 0 0;
+    text-transform: uppercase;
+  } */
+  /* Grid
+  ****************************************************/
+  
+  /* .CV-grid {
+    display: table;
+  }
+  
+  .CV-grid-column {
+    display: table-cell;
+  }
+  
+  .CV-timeline {
+    position: relative;
+    margin: 0 0 0 0.5em;
+    padding-left: 1.5em;
+    border-left: solid 1px #222222;
+  }
+  
+  .CV-timeline:first-of-type {
+    margin-top: 1em;
+  }
+  
+  .CV-timeline:last-of-type {
+    border-left-color: transparent;
+  }
+  
+  .CV-timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.5em;
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: solid 1px #222222;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  
+  .CV-timeline-heading {
+    margin: 0;
+    padding-bottom: 0.5em;
+    line-height: 1em;
+    font-weight: normal;
+    -webkit-transform: translateY(-0.1em);
+    -ms-transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
+  }
+  
+  .CV-timeline-heading-title {
+    line-height: 1;
+    color: #00aef0;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+  
+  .CV-timeline-heading-location {
+    font-size: 0.9em;
+  }
+  
+  .CV-timeline-heading-duration {
+    display: block;
+    font-size: 0.8em;
+    color: #6f6f6f;
+  }
+  
+  .CV-timeline-details {
+    display: block;
+    margin: 0;
+    padding-bottom: 2em;
+    padding: 0 0 2em 1em;
+    list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
+  }
+  
+  .CV-timeline-details-item {
+    margin-bottom: 0.5em;
+  } */
 
 /* Theme/Color palette of the website */
 .custom-theme {
@@ -328,6 +445,10 @@ img {
 
 .custom-theme footer {
     background: #897B7B;
+}
+
+.custom-theme section {
+    background-color: #C0BEB9;
 }
 
 .title {
