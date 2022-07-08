@@ -1,7 +1,7 @@
 // reference: https://www.tutorialspoint.com/typing-and-deleting-effect-with-javascript-and-css
 // edit from the reference above
 
-const words = ["a Software Engineer", "a Dreamer", "Vietnamese", "a Backend Developer", "a Student"];
+const words = ["a Software Engineer", "a Dreamer", "Vietnamese", "a Backend Developer", "a UC Student"];
 let i = 0;
 let counter;
 

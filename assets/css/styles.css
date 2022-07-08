@@ -12,7 +12,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, .logo {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 div, a, .logo {
@@ -25,6 +25,7 @@ div div span {
 
 .section-padding {
     padding: 100px 0px;
+    background-color: #C0BEB9;
 }
 
 /* Body set-up */
@@ -37,11 +38,7 @@ body {
     /* position: relative; */
 }
 
-/* Header set-up */
-/* header {
-    margin-top: 12%;
-    padding-top: 30px;
-} */
+/* Header Format */
 
 hr {
     position: relative;
@@ -63,16 +60,6 @@ hr {
     margin: 10px 0;
     font-size: 70px;
 }
-
-/* .header {
-    position: absolute;
-    bottom: 5vh;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    font-size: 13px;
-    z-index: 8;
-} */
 
 .flip-card-container {
     position: relative;
@@ -109,34 +96,34 @@ hr {
 }
 
 .flip-card-front {
-    background-color: #AFA4A4;
-    color: #D9D1D1;
-    transform: translateZ(10px);
+    background-color: #535E74;
+    color: yellowgreen;
+    transform: translateZ(15px);
 }
 
 .flip-card-back {
-    background-color: #AFA4A4;
-    color: #D9D1D1;
-    transform: rotateX(180deg) translateZ(10px);
+    background-color: #535E74;
+    color: yellowgreen;
+    transform: rotateX(180deg) translateZ(15px);
 }
 
 #white1, #white2, #white3, #white4, #white5, #white6 {
-    background-color: #D9D1D1;
-    color: #111;
+    background-color: #595D65;
+    color: yellowgreen;
 }
 
 span a:link {
-    color: #6F5726;
+    color: white;
     text-decoration: none;
 }
 
 span a:visited {
-    color: #6F5726;
+    color: whitesmoke;
     text-decoration: none;
 }
 
 span a:active {
-    color: #6F5726;
+    color: whitesmoke;
     text-decoration: none;
 }
 
@@ -255,7 +242,7 @@ img {
 }
 
 .self .self-img:hover:after {
-    background: bisque;
+    background: darkslategrey;
     left: 5px;
     top: -15px;
     right: 15px;
@@ -273,6 +260,14 @@ img {
     z-index: -1;
     -webkit-transition: all .5s;
     transition: all .5s;
+}
+
+.self h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.self .content {
+    color: #21201F;
 }
 
 .self .content p {
@@ -308,60 +303,97 @@ img {
     margin-top: 30px;
 }
 
+.self button {
+    background: #AEDFF2;
+    color: #133846;
+    text-decoration: none !important;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 20px;
+    border-radius: 20px;
+    transition: .4s;
+}
+
+.self button:hover {
+    background: transparent;
+    border: 2px solid #AEDFF2;
+    cursor: pointer;
+}
+
+.self button a {
+    text-decoration: none;
+    color: #21201F;
+}
+
 /* Experiences */
-/* .CV-page {
+/* main {
+    background-color: #6A6866;
+} */
+
+main::before, main::after {
+    position: inherit;
+}
+
+.experience-page {
     max-width: 700px;
     margin: 0 auto;
     padding: 0 2em;
     color: #222222;
     font-size: 1em;
     font-family: 'Lato', sans-serif;
-  }
+    padding: 35px;
+}
+
+.experience-page span {
+    font-size: 18px;
+}
   
-  @media all and (max-width: 500px) {
-    .CV-page {
-      padding: 0 1em;
+@media all and (max-width: 500px) {
+    .experience-page {
+        padding: 0 1em;
     }
-  }
-  /* if IE<=7 */
-  
-  /* .CV-page\ {
+}
+
+
+/* if IE<=7 */  
+.experience-page\ {
     width: 1100px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-  }
+}
   
-  .CV-secondaryHeading {
+.experience-secondaryHeading {
     position: relative;
     margin: 2em 0 0;
     text-transform: uppercase;
-  } */
-  /* Grid
-  ****************************************************/
+}
+
+/* Grid
+*************************************************** */
   
-  /* .CV-grid {
+.experience-grid {
     display: table;
-  }
+}
   
-  .CV-grid-column {
+.experience-grid-column {
     display: table-cell;
-  }
+}
   
-  .CV-timeline {
+.experience-timeline {
     position: relative;
     margin: 0 0 0 0.5em;
     padding-left: 1.5em;
     border-left: solid 1px #222222;
-  }
+}
   
-  .CV-timeline:first-of-type {
+.experience-timeline:first-of-type {
     margin-top: 1em;
-  }
+}
   
-  .CV-timeline:last-of-type {
+.experience-timeline:last-of-type {
     border-left-color: transparent;
-  }
+}
   
-  .CV-timeline:before {
+.experience-timeline:before {
     content: "";
     position: absolute;
     top: 0;
@@ -372,9 +404,9 @@ img {
     border: solid 1px #222222;
     background-color: #ffffff;
     border-radius: 50%;
-  }
+}
   
-  .CV-timeline-heading {
+.experience-timeline-heading {
     margin: 0;
     padding-bottom: 0.5em;
     line-height: 1em;
@@ -382,40 +414,52 @@ img {
     -webkit-transform: translateY(-0.1em);
     -ms-transform: translateY(-0.1em);
     transform: translateY(-0.1em);
-  }
+}
   
-  .CV-timeline-heading-title {
+.experience-timeline-heading-title {
     line-height: 1;
-    color: #00aef0;
+    color: #795E47;
     font-style: italic;
     text-transform: uppercase;
-  }
+}
   
-  .CV-timeline-heading-location {
+.experience-timeline-heading-location {
     font-size: 0.9em;
-  }
+}
   
-  .CV-timeline-heading-duration {
+.experience-timeline-heading-duration {
     display: block;
     font-size: 0.8em;
     color: #6f6f6f;
-  }
+}
   
-  .CV-timeline-details {
+.experience-timeline-details {
     display: block;
     margin: 0;
     padding-bottom: 2em;
     padding: 0 0 2em 1em;
     list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
-  }
+}
   
-  .CV-timeline-details-item {
+.experience-timeline-details-item {
     margin-bottom: 0.5em;
-  } */
+} 
+
+
+/* footer - format */
+.footer {
+    padding: 40px 10px;
+    background: #111;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 15px;
+}
 
 /* Theme/Color palette of the website */
 .custom-theme {
-    background-color: #AFA4A4;
+    background-color: #606570;
     color: whitesmoke;
 }
 
@@ -423,9 +467,9 @@ img {
     background: #343434;
 }
 
-.custom-theme .nav-scroll {
+/* .custom-theme .nav-scroll {
     background: #181818;
-}
+} */
 
 .custom-theme .nav-scroll .icon-bar {
     color: burlywood;
@@ -444,11 +488,7 @@ img {
 }
 
 .custom-theme footer {
-    background: #897B7B;
-}
-
-.custom-theme section {
-    background-color: #C0BEB9;
+    background: #878A91;
 }
 
 .title {
@@ -487,13 +527,6 @@ img {
 .title-left:after {
     left: 0;
 }
-  
-/* .bg-gray {
-    background: #f7f7f7;
-}
-.bg-gray .title:before {
-    background: #ddd;
-} */
 
 /* animation */
 #shuffle {
