@@ -28,6 +28,7 @@ div div span {
     background-color: #C0BEB9;
 }
 
+
 /* Body set-up */
 body {
     color: #333;
@@ -37,6 +38,7 @@ body {
     overflow-x: hidden !important; /* if the content in the nav box is too large consider adding a scroll bar */
     /* position: relative; */
 }
+
 
 /* Header Format */
 
@@ -325,6 +327,7 @@ img {
     color: #21201F;
 }
 
+
 /* Experiences */
 /* main {
     background-color: #6A6866;
@@ -353,7 +356,6 @@ main::before, main::after {
         padding: 0 1em;
     }
 }
-
 
 /* if IE<=7 */  
 .experience-page\ {
@@ -446,6 +448,7 @@ main::before, main::after {
 } 
 
 
+
 /* footer - format */
 .footer {
     padding: 40px 10px;
@@ -456,6 +459,8 @@ main::before, main::after {
 .footer p {
     font-size: 15px;
 }
+
+
 
 /* Theme/Color palette of the website */
 .custom-theme {
