@@ -25,7 +25,7 @@ div div span {
 
 .section-padding {
     padding: 100px 0px;
-    background-color: #C0BEB9;
+    background-color: #576A8F;
 }
 
 
@@ -41,7 +41,6 @@ body {
 
 
 /* Header Format */
-
 hr {
     position: relative;
 }
@@ -55,7 +54,7 @@ hr {
 }
 
 .header .caption h2 {
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .header .caption h1 {
@@ -93,6 +92,7 @@ hr {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+    font-weight: 200;
     backface-visibility: hidden;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -180,6 +180,7 @@ span a:active {
 .nav-scroll .icon-bar {
     color: #222;
 }
+
 .nav-scroll .navbar-nav .nav-link {
     color: whitesmoke;
 }
@@ -188,6 +189,7 @@ span a:active {
     padding: 10px 0;
     color: #111;
 }
+
 .nav-scroll .logo:hover {
     color: burlywood;
 }
@@ -224,8 +226,8 @@ span a:active {
     color: burlywood;
 }
 
-/* About Me Section */
 
+/* About Me Section */
 img {
     max-width: 100%;
     height: auto;
@@ -253,7 +255,7 @@ img {
 
 .self .self-img:after {
     content: '';
-    background: #C0BEB9;
+    background: #576A8F;
     position: absolute;
     left: 15px;
     right: 5px;
@@ -265,11 +267,12 @@ img {
 }
 
 .self h4 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 .self .content {
-    color: #21201F;
+    color: whitesmoke;
+    padding: 30px 35px;
 }
 
 .self .content p {
@@ -277,7 +280,7 @@ img {
 }
 
 .self .content p span {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -329,18 +332,15 @@ img {
 
 
 /* Experiences */
-/* main {
-    background-color: #6A6866;
-} */
 
 main::before, main::after {
     position: inherit;
 }
 
 .experience-page {
-    max-width: 700px;
+    /* max-width: 500px; */
     margin: 0 auto;
-    padding: 0 2em;
+    /* padding: 0 2em; */
     color: #222222;
     font-size: 1em;
     font-family: 'Lato', sans-serif;
@@ -349,12 +349,6 @@ main::before, main::after {
 
 .experience-page span {
     font-size: 18px;
-}
-  
-@media all and (max-width: 500px) {
-    .experience-page {
-        padding: 0 1em;
-    }
 }
 
 /* if IE<=7 */  
@@ -370,15 +364,14 @@ main::before, main::after {
 }
 
 /* Grid
-*************************************************** */
-  
-.experience-grid {
+*************************************************** */  
+/* .experience-grid {
     display: table;
 }
   
 .experience-grid-column {
     display: table-cell;
-}
+} */
   
 .experience-timeline {
     position: relative;
@@ -420,7 +413,7 @@ main::before, main::after {
   
 .experience-timeline-heading-title {
     line-height: 1;
-    color: #795E47;
+    color: #DBE4F4;
     font-style: italic;
     text-transform: uppercase;
 }
@@ -432,15 +425,17 @@ main::before, main::after {
 .experience-timeline-heading-duration {
     display: block;
     font-size: 0.8em;
-    color: #6f6f6f;
+    color: #DAB79A;
 }
+
+
   
 .experience-timeline-details {
     display: block;
     margin: 0;
     padding-bottom: 2em;
     padding: 0 0 2em 1em;
-    list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
+    list-style-image: url(../img/angle-right.svg); /* why this one not working T_T */
 }
   
 .experience-timeline-details-item {
@@ -536,4 +531,11 @@ main::before, main::after {
 /* animation */
 #shuffle {
     display: inline-block;
+}
+
+/* responsive */
+@media all and (max-width: 500px) {
+    .experience-page {
+        padding: 2em 1em;
+    }
 }

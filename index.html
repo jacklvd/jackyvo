@@ -24,7 +24,7 @@
         
     </head>
 
-    <body class="custom-theme"  data-bs-spy="scroll" data-bs-target=".navbar" data-offset="0" tabindex="0">
+    <body class="custom-theme"  data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" tabindex="0">
 
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #878787">
@@ -38,24 +38,24 @@
                 
                 <!-- navbar links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id= "navbar-scrollspy">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a>
+                            <a class="nav-link active" href="#home" data-bs-scroll-nav="0">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#about">About</a>
+                            <a class="nav-link active" href="#about" data-bs-scroll-nav="1">About</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link active" href="#experiences" data-bs-scroll-nav="2">Experiences</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#projects" data-bs-scroll-nav="2">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#experiences">Experiences</a>
+                            <a class="nav-link active" href="#skills" data-bs-scroll-nav="3">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#contact">Contact</a>
+                            <a class="nav-link active" href="#contact" data-bs-scroll-nav="4">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -64,46 +64,48 @@
         <!-- End of Navbar -->
         
         <!-- Header -->
-        <header class="header" data-stellar-background-ratio="0.5" style="padding-top: 30vh;" id="home">
+        <header class="header" data-stellar-background-ratio="0.5" style="padding-top: 30vh;" id="home" data-bs-scroll-index="0">
             <div class="container">
-                <div class="vertical-center full-width text-center caption">
-                    <h1>Hello, World!</h1>
-                    <span>I am </span>
-                    <em><b><span id="shuffle"></span></b><span>|</span></em>
-                    <br>
-                    <br>
-                    <hr>
-                    <div class="btn-group">
-                        <button class="flip-card-container" type="button">
-                            <div class="flip-card">
-                                <span class="flip-card-front" id="white1">LinkedIn</span>
-                                <span class="flip-card-back" id="white2"><a href="https://www.linkedin.com/in/longv3312/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></span>
-                            </div>
-                        </button>
-                        <button class="flip-card-container" type="button">
-                            <div class="flip-card">
-                                <span class="flip-card-front">Github</span>
-                                <span class="flip-card-back"><a href="https://github.com/jacklvd" target="_blank"><i class="fa-brands fa-github"></i></a></span>
-                            </div>
-                        </button>
-                        <button class="flip-card-container" type="button">
-                            <div class="flip-card">
-                                <span class="flip-card-front" id="white3">Mail</span>
-                                <span class="flip-card-back" id="white4"><a href="mailto:volg@mail.uc.edu"><i class="fa-solid fa-envelope-open"></i></a></span>
-                            </div>
-                        </button>
-                        <button class="flip-card-container" type="button">
-                            <div class="flip-card">
-                                <span class="flip-card-front">Instagram</span>
-                                <span class="flip-card-back"><a href="https://www.instagram.com/jacklvd_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></span>
-                            </div>
-                        </button>
-                        <button class="flip-card-container" type="button">
-                            <div class="flip-card">
-                                <span class="flip-card-front" id="white5">HackerRank</span>
-                                <span class="flip-card-back" id="white6"><a href="https://www.hackerrank.com/jlvd32" target="_blank"><i class="fa-brands fa-hackerrank"></i></i></a></span>
-                            </div>
-                        </button>
+                <div class="row">
+                    <div class="vertical-center full-width text-center caption">
+                        <h1>Hello, World!</h1>
+                        <span>I am </span>
+                        <em><b><span id="shuffle"></span></b><span>|</span></em>
+                        <br>
+                        <br>
+                        <hr>
+                        <div class="btn-group my-class d-flex align-items-center justify-content-center flex-wrap px-2">
+                            <button class="flip-card-container" type="button">
+                                <div class="flip-card">
+                                    <span class="flip-card-front" id="white1">LinkedIn</span>
+                                    <span class="flip-card-back" id="white2"><a href="https://www.linkedin.com/in/longv3312/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></span>
+                                </div>
+                            </button>
+                            <button class="flip-card-container" type="button">
+                                <div class="flip-card">
+                                    <span class="flip-card-front">Github</span>
+                                    <span class="flip-card-back"><a href="https://github.com/jacklvd" target="_blank"><i class="fa-brands fa-github"></i></a></span>
+                                </div>
+                            </button>
+                            <button class="flip-card-container" type="button">
+                                <div class="flip-card">
+                                    <span class="flip-card-front" id="white3">Mail</span>
+                                    <span class="flip-card-back" id="white4"><a href="mailto:volg@mail.uc.edu"><i class="fa-solid fa-envelope-open"></i></a></span>
+                                </div>
+                            </button>
+                            <button class="flip-card-container" type="button">
+                                <div class="flip-card">
+                                    <span class="flip-card-front">Instagram</span>
+                                    <span class="flip-card-back"><a href="https://www.instagram.com/jacklvd_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></span>
+                                </div>
+                            </button>
+                            <button class="flip-card-container" type="button">
+                                <div class="flip-card">
+                                    <span class="flip-card-front" id="white5">HackerRank</span>
+                                    <span class="flip-card-back" id="white6"><a href="https://www.hackerrank.com/jlvd32" target="_blank"><i class="fa-brands fa-hackerrank"></i></i></a></span>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,7 +113,7 @@
         <!-- End of Header -->
 
         <!-- About Section -->
-        <section class="self section-padding" id="about">
+        <section class="self section-padding" id="about" data-bs-scroll-index="1">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
@@ -119,16 +121,20 @@
                             <img src="./assets/img/IMG-7369.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <div class="content">
                             <h4 class="title title-left">About Me <span class="fa-solid fa-thumbs-up"></span></h4>
                             <p>I am <span>Jack Vo</span>, a rising junior at University of Cincinnati, OH, United States, major in Computer Science with a minor in Business Analysis. I am open to contribute to any
-                            projects as well as looking for internship opportunities</p>
+                            projects as well as looking for internship opportunities.</p>
                             <p><span>Somethings of Me:</span></p>
                             <p>
-                                •	I am interested in Full Stack Development, Data Science, Machine Learning.<br>
-                                •	I am also a CodePath student.<br>
-                                •	Currently, I am learning about Django, SQL.<br>
+                                •	With the belief in the power of technology, which is the fastest and most impactful tool to change people and change the world. Technology is exciting and universal: 
+                                everybody uses computers to work and connect. I am striving to become a significant player in the software industry.<br> 
+                                •   Outside of class, I am interested in learning and researching on my own. I have been dived into hundreds of online courses to in-depth and expand my knowledge. 
+                                In the pair of time, I have built many of projects to sharpen my skills and understanding of languages as well as tools.
+                                •	I am interested in Full Stack Development, Data Science, Application Development, and Machine Learning.<br>
+                                •	At the present, I am a CodePath student.<br>
+                                •	Currently, I am learning about Django, SQL as well as sharpen my Python knowledge.<br>
                             </p><br>
                             <button type="button"><a href="mailto:volg@mail.uc.edu">Let's Talk</a></button>
                         </div>
@@ -137,27 +143,49 @@
             </div>
         </section>
 
-        <main class="experience-page" id="experiences">
-            <div class="experience-grid">
-                <div class="experience-grid-column">
-                    <div class="experience-jobs">
-                        <h2 class="title experiences-secondaryHeading experiences-jobs-heading">Relevant Experiences</h2>
-                        <!-- <hr> -->
-                        <section class="experience-timeline experience-job">
-                            <h4 class="experience-timeline-heading"><span class="experience-timeline-heading-title">STEAM For Vietnam </span>&#8211; <span class="experience-timeline-heading-location">Ha Noi,VN </span><small class="experience-timeline-heading-duration">June 2022 - Present</small></h4>
-                            <ul class="experience-timeline-details">
-                                <li class="experience-job-timeline-item">Developed and collaborate with industry experts to provide teaching material to Vietnamese children.</li>
-                                <li class="experience-job-timeline-item">Tested and created grader file and game logic for Game Teaching Projects.</li>
-                                <li class="experience-job-timeline-item">Taught more than 30,000 children around the globe.</li>
-                            </ul>
-                        </section>
-                        <section class="experience-timeline experience-job">
-                            <h4 class="experience-timeline-heading"><span class="experience-timeline-heading-title">CodePath Participation </span>&#8211; <span class="experience-timeline-heading-location">Remote </span><small class="experience-timeline-heading-duration">June 2022 - Present</small></h4>
-                            <ul class="experience-timeline-details">
-                                <li class="experience-timeline-details-item">Participated in the Interview Prep Course after passing the technical test. </li>
-                                <li class="experience-timeline-details-item">Worked remotely to meet weekly deadlines and project checkpoints.</li>
-                            </ul>
-                        </section>
+        <main class="experience-page" data-stellar-background-ratio="0.75">
+            <div class="container">
+                <div class="row experience-grid-column">
+                    <div class="col-lg-4 col-sm-6">
+    					<div class="item mb-md50">
+    						<span class="fa-solid fa-book"></span><br>
+    						<h5 class="title title-left">Education</h5>
+    						<ul>
+    							<li>
+    								<h6>University of Cincinnati</h6>
+									<p>Bachelor of Science</p>
+									<p>Computer Science, minor Business Analysis</p>
+    							</li>
+    							<li>
+    								<h6>Shoreline Community College</h6>
+									<p>Associate of Science</p>
+                                    <p>Computer Science</p>
+    							</li>
+    						</ul>
+    					</div>
+    				</div>
+                    <div class="experience-jobs col-lg-6 col-sm-6">
+                        <div class="mb-md50">
+                            <span class="icon fas fa-briefcase"></span><br>
+                            <h5 class="title experiences-secondaryHeading experiences-jobs-heading">Relevant Experiences</h5>
+                            <!-- <hr> -->
+                            <section class="experience-timeline experience-job">
+                                <h4 class="experience-timeline-heading"><span class="experience-timeline-heading-title">STEAM For Vietnam </span>&#8211; <span class="experience-timeline-heading-location">Burlingame, CA, U.S </span><small class="experience-timeline-heading-duration">June 2022 - Present</small></h4>
+                                <ul class="experience-timeline-details">
+                                    <li class="experience-timeline-details-item">Developed and collaborate with industry experts to provide teaching material to Vietnamese children.</li>
+                                    <li class="experience-timeline-details-item">Tested and created grader file and game logic for Game Teaching Projects.</li>
+                                    <li class="experience-timeline-details-item">Taught more than 30,000 children in and outside of Vietnam.</li>
+                                </ul>
+                            </section>
+                            <section class="experience-timeline experience-job">
+                                <h4 class="experience-timeline-heading"><span class="experience-timeline-heading-title">CodePath Participation </span>&#8211; <span class="experience-timeline-heading-location">Remote, U.S </span><small class="experience-timeline-heading-duration">June 2022 - Present</small></h4>
+                                <ul class="experience-timeline-details">
+                                    <li class="experience-timeline-details-item">Participated in the Interview Prep Course after passing the technical test. </li>
+                                    <li class="experience-timeline-details-item">Worked remotely to meet weekly deadlines and project checkpoints.</li>
+                                    <li class="experience-timeline-details-item">Worked remotely as a team to solve weekly data structure algorithm problems such as Linked List, Stack, Queue, Binary Tree.</li>
+                                </ul>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
