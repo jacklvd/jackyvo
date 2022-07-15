@@ -1,4 +1,4 @@
-// reference: https://codepen.io/fbmiranda/pen/edqgxm
+// reference: https://bootstrap-menu.com/detail-autohide.html
 
 // Hide Navbar on scroll down
 document.addEventListener("DOMContentLoaded", function(){
