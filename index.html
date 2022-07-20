@@ -26,8 +26,16 @@
 
     <body class="custom-theme"  data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" tabindex="0">
 
+        <div class="page-bg"></div>
+
+        <div class="animation-wrapper">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+        </div>
         <!-- navbar -->
-        <nav class="autohide navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #292929">
+        <nav class="autohide navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#08070A">
             <!-- logo -->
             <div class="container">
                 <a class="logo" href="index.html">jackyv💻</a>
@@ -62,25 +70,9 @@
             </div>
         </nav>
         <!-- End of Navbar -->
-
+        
         <!-- Header -->
         <header class="header" data-stellar-background-ratio="0.5" style="padding-top: 30vh;" id="home">
-            <div class="page-bg"></div>
-
-                <div class="animation-wrapper">
-                <div class="particle particle-1"></div>
-                <div class="particle particle-2"></div>
-                <div class="particle particle-3"></div>
-                <div class="particle particle-4"></div>
-            </div>
-            <!-- <div class="page-bg"></div>
-
-            <div class="animation-wrapper">
-                <div class="particle particle-1"></div>
-                <div class="particle particle-2"></div>
-                <div class="particle particle-3"></div>
-                <div class="particle particle-4"></div>
-            </div>   -->
             <div class="container">
                 <div class="row">
                     <div class="vertical-center full-width text-center caption">
@@ -129,7 +121,7 @@
         <!-- End of Header -->
 
         <!-- About Section -->
-        <section class="self section-padding" id="about">
+        <section class="self section-padding" id="about" data-stellar-background-ratio="0.5" style="background-color: #201B17">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
@@ -137,7 +129,7 @@
                             <img src="./assets/img/IMG-7369.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-7">
                         <div class="content">
                             <h4 class="title title-left">About Me <span class="fa-solid fa-thumbs-up"></span></h4>
                             <p>I am <span>Jack Vo</span>, a rising junior at University of Cincinnati, OH, United States, major in Computer Science with a minor in Business Analysis. I am open to contribute to any
@@ -152,29 +144,36 @@
                                 •	At the present, I am a CodePath student.<br>
                                 •	Currently, I am learning about Django, SQL as well as sharpen my Python knowledge.<br>
                             </p><br>
-                            <button type="button"><a href="mailto:volg@mail.uc.edu">Let's Talk</a></button>
+                            <div class="btn-group d-flex justify-content-center rounded-pill">
+                                <button type="button" class="btn btn-sm me-4"><a href="mailto:volg@mail.uc.edu">Let's Talk</a></button>
+                                <button type="button" class="btn btn-sm me-4"><a href="./assets/resume/Vo_Long_CSCoopResume.pdf" target="_blank">Resume</a></button>
+                            </div>
+                            <!-- <div class="col">
+                                <button type="button" class="btn btn-sm center-block" style="display: inline-block;"><a href="mailto:volg@mail.uc.edu">Resume</a></button>
+                            </div> -->
+                            <!-- <div class="col-sm-12 justify-content-center">
+                                <button type="button" class="btn btn-sm" style="display: inline-block;"><a href="mailto:volg@mail.uc.edu">Resume</a></button>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <main class="experience-page" data-stellar-background-ratio="0.75">
+        <main class="experience-page" data-stellar-background-ratio="0.75" style="background-color: #24262A;">
             <div class="container">
                 <div class="row experience-grid-column">
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-5 col-sm-6">
                         <span class="fa-solid fa-book"></span><br>
                         <h5 class="title title-left">Education</h5>
                         <ul>
                             <li>
                                 <h6>University of Cincinnati</h6>
-                                <p>Bachelor of Science</p>
-                                <p>Computer Science, minor Business Analysis</p>
+                                <p>Computer Science, minor Business Analysis (BS)</p>
                             </li>
                             <li>
                                 <h6>Shoreline Community College</h6>
-                                <p>Associate of Science</p>
-                                <p>Computer Science</p>
+                                <p>Computer Science (AS)</p>
                             </li>
                         </ul>
     				</div>

@@ -2,26 +2,26 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,300,100,100italic,300italic,400italic,700,700italic|Roboto+Slab:400,100,300,700');
 
 /* Config */
-$color-bg: #111;
+$color-bg: #2C3759;
 $color-particle: #fff;
 $spacing: 2560px;
 $time-1: 60s;
 $time-2: 120s;
 $time-3: 180s;
-$time-4: 600s;
+$time-4: 200s;
 
-/* Pauls awesome mixin */
+/* mixins */
 @function particles($max) {
-   $val: 0px 0px $color-particle;
-   @for $i from 1 through $max {
-      $val: #{$val},
-      random($spacing)+px random($spacing)+px $color-particle;
-   }
-   @return $val;
+  $val: 0px 0px $color-particle;
+  @for $i from 1 through $max {
+    $val: #{$val}, random($spacing)+px random($spacing)+px $color-particle;
+  }
+  @return $val;
 }
 
 @mixin particles($max) {
-   box-shadow: particles($max);
+  box-shadow: particles($max);
+  border-radius: 50%;
 }
 
 /* General set-up */
@@ -32,6 +32,10 @@ $time-4: 600s;
     outline: none !important; 
     list-style: none;
     /* justify-content: center; */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6, .logo {
@@ -48,7 +52,8 @@ div div span {
 
 .section-padding {
     padding: 100px 0px;
-    background-color: #292928;
+    // background-color:#292928 !important;
+    z-index: 9 !important;
 }
 
 
@@ -59,6 +64,7 @@ body {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden !important; /* if the content in the nav box is too large consider adding a scroll bar */
+    height: 100%;
     /* position: relative; */
 }
 
@@ -70,6 +76,7 @@ hr {
 
 .header {
     min-height: 100vh;
+    // z-index: 5;
 }
 
 .header .caption {
@@ -99,7 +106,7 @@ hr {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 250ms ease-in-out;
+    transition: transform 300ms ease-in-out;
     transform: rotateZ(-60px);
 }
 
@@ -123,13 +130,13 @@ hr {
 .flip-card-front {
     background-color: #e4ff1a;
     color: #70cdff;
-    transform: translateZ(15px);
+    transform: translateZ(18px);
 }
 
 .flip-card-back {
     background-color: #e4ff1a;
     color: #70cdff;
-    transform: rotateX(180deg) translateZ(15px);
+    transform: rotateX(180deg) translateZ(18px);
 }
 
 #white1, #white2, #white3, #white4, #white5, #white6 {
@@ -267,6 +274,10 @@ span a:active {
 
 
 /* About Me Section */
+// section {
+//     z-index: 3;
+// }
+
 img {
     max-width: 100%;
     height: auto;
@@ -285,7 +296,7 @@ img {
 }
 
 .self .self-img:hover:after {
-    background: darkslategrey;
+    background: #A79687;
     left: 5px;
     top: -15px;
     right: 15px;
@@ -294,7 +305,7 @@ img {
 
 .self .self-img:after {
     content: '';
-    background: #292928;
+    background: #201B17;
     position: absolute;
     left: 15px;
     right: 5px;
@@ -309,9 +320,16 @@ img {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
+// .self .title {
+//     text-align: center !important;
+//     justify-content: center !important;
+// }
+
 .self .content {
     color: whitesmoke;
-    padding: 30px 35px;
+    padding: 25px 35px;
+    border-radius: 7px;
+    box-shadow: 0px 2px 5px 2px;
 }
 
 .self .content p {
@@ -347,26 +365,37 @@ img {
     margin-top: 30px;
 }
 
+// .self .button-grp {
+//     display: inline-block;
+// }
+
 .self button {
-    background: #AEDFF2;
+    // display: inline-block;
+    background: #24262A;
     color: #133846;
     text-decoration: none !important;
     border: 2px solid transparent;
+    border-collapse: separate;
     font-weight: bold;
-    padding: 13px 20px;
-    border-radius: 20px;
+    padding: 6px 3px !important;
+    font-size: medium;
+    border-radius: 20px 20px !important;
     transition: .4s;
+    z-index: 2 !important;
+    position: absolute;
 }
 
 .self button:hover {
-    background: transparent;
-    border: 2px solid #AEDFF2;
+    // background: transparent;
+    border: 3px solid #AEDFF2;
     cursor: pointer;
+    z-index: 2;
 }
 
 .self button a {
     text-decoration: none;
-    color: #21201F;
+    color: #C49B66;
+    z-index: 2;
 }
 
 
@@ -380,7 +409,7 @@ main::before, main::after {
     /* max-width: 500px; */
     margin: 0 auto;
     /* padding: 0 2em; */
-    color: #222222;
+    color: #ebebeb;
     font-size: 1em;
     font-family: 'Lato', sans-serif;
     padding: 35px;
@@ -416,7 +445,7 @@ main::before, main::after {
     position: relative;
     margin: 0 0 0 0.5em;
     padding-left: 1.5em;
-    border-left: solid 1px #222222;
+    border-left: solid 1px #f7ece1;
 }
   
 .experience-timeline:first-of-type {
@@ -464,7 +493,7 @@ main::before, main::after {
 .experience-timeline-heading-duration {
     display: block;
     font-size: 0.8em;
-    color: #DAB79A;
+    color: #f2c57c;
 }
   
 .experience-timeline-details {
@@ -483,20 +512,26 @@ main::before, main::after {
 
 /* footer - format */
 .footer {
-    padding: 40px 10px;
-    background: #111;
+    padding: 90px 10px 0px 10px; 
+    // background: #111;
     text-align: center;
+    // bottom: 10 !important;
+    // height: 100px !important;
+    left: 0;
+    position: relative;
+    width: 100%;
 }
 
 .footer p {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
 
 /* Theme/Color palette of the website */
 .custom-theme {
-    background-color: #0C0C05;
+    background-color: #08070A;
     color: whitesmoke;
 }
 
@@ -525,7 +560,7 @@ main::before, main::after {
 // }
 
 .custom-theme footer {
-    background: #878A91;
+    background: #08070A;
 }
 
 .title {
@@ -534,6 +569,8 @@ main::before, main::after {
     padding-bottom: 10px;
     position: relative;
     z-index: 2;
+    // text-align: center;
+    // justify-self: center;
 }
 
 .title:after {
@@ -558,101 +595,101 @@ main::before, main::after {
   
 .title-left {
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    // justify-content: center !important;
 }
 
 .title-left:after {
     left: 0;
 }
   
-.page-bg,
-.animation-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.page-bg, .animation-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
-
-// .page-bg { 
-// //   background: $color-bg url("https://images.unsplash.com/photo-1562729562-679ab5311bbf?dpr=1&auto=format&fit=crop&w=1920&h=1080&q=100&cs=tinysrgb&crop=") no-repeat top center;
-// //   background-size: cover;
-//   z-index: -1;
-// }
-
-.particle,
+  
+.page-bg {
+    // background: $color-bg;
+    // background-blend-mode: screen;
+    // background-size: cover;
+    // filter: grayscale(100%);
+    z-index: -1;
+}
+  
+.particle, .particle:after {
+    background: transparent;
+}
+  
 .particle:after {
-  background: transparent;
+    position: absolute;
+    content: "";
+    top: $spacing;
 }
-
-.particle:after {
-  position: absolute;
-  content: "";
-  top: $spacing;
-}
-
+  
 .particle-1 {
-  animation: animParticle $time-1 linear infinite;
-  @include particles(600);
-  height: 1px;
-  width: 1px;
+    animation: animParticle $time-1 linear infinite;
+    @include particles(1000);
+    height: 2px;
+    width: 2px;
 }
-
+  
 .particle-1:after {
-  @include particles(600);
-  height: 1px;
-  width: 1px;
+    @include particles(900);
+    height: 2px;
+    width: 2px;
 }
-
+  
 .particle-2 {
-  animation: animParticle $time-2 linear infinite;
-  @include particles(200);
-  height: 2px;
-  width: 2px;
+    animation: animParticle $time-2 linear infinite;
+    @include particles(800);
+    height: 2px;
+    width: 2px;
 }
-
+  
 .particle-2:after {
-  @include particles(200);
-  height: 2px;
-  width: 2px;
+    @include particles(500);
+    height: 3px;
+    width: 3px;
 }
-
-.particle-3 {
-  animation: animParticle $time-3 linear infinite;
-  @include particles(100);
-  height: 3px;
-  width: 3px;
-}
-
+  
 .particle-3:after {
-  @include particles(100);
-  height: 3px;
-  width: 3px;
+    @include particles(1100);
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
 }
-
+  
 .particle-4 {
-  animation: animParticle $time-4 linear infinite;
-  @include particles(400);
-  height: 1px;
-  width: 1px;
+    animation: animParticle $time-4 linear infinite;
+    @include particles(1200);
+    height: 1px;
+    width: 1px;
 }
-
+  
 .particle-4:after {
-  @include particles(400);
-  height: 1px;
-  width: 1px;
+    @include particles(700);
+    height: 1px;
+    width: 1px;
 }
-
+  
 @keyframes animParticle {
-  from { transform: translateY(0px); }
-  to   { transform: translateY($spacing * -1); }
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY($spacing * -1);
+    }
 }
+  
 
-.page-wrapper {
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-}
+// .page-wrapper {
+//     text-align: center;
+//     color: #fff;
+//     z-index: 2;
+// }
 
 /* animation */
 #shuffle {
