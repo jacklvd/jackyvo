@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,300,100,100italic,300italic,400italic,700,700italic|Roboto+Slab:400,100,300,700');
 
+
+/* Table of content of CSS Page
+    1. Config (particle background)
+    2. General Set-up
+    3. Header
+    4. Navbar
+    5. Self
+    6. Experiences
+    7. Skills
+    8. Projects
+    9. Custom background
+    10. Responsive and Animation
+*/
+
+
 /* Config */
 $color-bg: #2C3759;
 $color-particle: #fff;
@@ -52,12 +67,9 @@ div div span {
 
 .section-padding {
     padding: 100px 0px;
-    // background-color:#292928 !important;
     z-index: 9 !important;
 }
 
-
-/* Body set-up */
 body {
     color: #333;
     line-height: 1.3;
@@ -65,7 +77,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden !important; /* if the content in the nav box is too large consider adding a scroll bar */
     height: 100%;
-    /* position: relative; */
 }
 
 
@@ -96,9 +107,6 @@ hr {
     position: relative;
     width: 120px;
     height: 40px;
-    border: 0.25px solid pink;
-    perspective: 300px;
-    /* display: inline; */
 }
 
 .flip-card {
@@ -106,7 +114,7 @@ hr {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 300ms ease-in-out;
+    transition: transform 250ms ease-in-out;
     transform: rotateZ(-60px);
 }
 
@@ -130,13 +138,13 @@ hr {
 .flip-card-front {
     background-color: #e4ff1a;
     color: #70cdff;
-    transform: translateZ(18px);
+    transform: translateZ(15px);
 }
 
 .flip-card-back {
     background-color: #e4ff1a;
     color: #70cdff;
-    transform: rotateX(180deg) translateZ(18px);
+    transform: rotateX(180deg) translateZ(15px);
 }
 
 #white1, #white2, #white3, #white4, #white5, #white6 {
@@ -168,15 +176,7 @@ span a:active {
     top: 0;
     width: 100%;
     background: transparent;
-    z-index: 9; /* for stack over other elements */
-    /* a bit of animation when the screen size is changing */
-    // -webkit-transition: -webkit-transform .5s;
-    // transition: -webkit-transform .5s;
-    // transition: top 0.3s transform .5s;
-    // transition: top 0.3s transform .5s, -webkit-transform .5s;
-    // -webkit-transform: translateY(100px);
-    // transform: translateY(100px);
-    // transition: top 0.2s ease-in-out;
+    z-index: 9; 
 }
 
 .navbar .icon-bar {
@@ -274,10 +274,6 @@ span a:active {
 
 
 /* About Me Section */
-// section {
-//     z-index: 3;
-// }
-
 img {
     max-width: 100%;
     height: auto;
@@ -319,11 +315,6 @@ img {
 .self h4 {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
-
-// .self .title {
-//     text-align: center !important;
-//     justify-content: center !important;
-// }
 
 .self .content {
     color: whitesmoke;
@@ -513,12 +504,8 @@ main::before, main::after {
 /* footer - format */
 .footer {
     padding: 90px 10px 0px 10px; 
-    // background: #111;
     text-align: center;
-    // bottom: 10 !important;
-    // height: 100px !important;
     left: 0;
-    position: relative;
     width: 100%;
 }
 
@@ -527,7 +514,68 @@ main::before, main::after {
     font-weight: 500;
 }
 
+// skills section
+.skills {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
 
+.skills-wrapper {
+    border-left: none !important;
+    border-right: none !important;
+    // border: 5px solid;
+    padding: 35px 5px 35px 5px;
+    background: linear-gradient(to left, #ccc 50%, transparent 50%) 100% bottom,
+                linear-gradient(to right, #ccc 50%, transparent 50%) 100% top;
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+}
+  
+.skill-header {
+    padding-bottom: 0 !important;
+    margin-bottom: 1rem !important;
+    margin-right: 40rem;
+    // margin-top: 5rem;
+}
+
+.skills-wrapper img {
+    padding: 1.5rem;
+}
+  
+.icon-skills {
+    width: 9.75rem;
+    height: 9.75rem;
+}
+
+.icon-card {
+    background-color: #201B17;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px #a17a69;
+    padding: 60px;
+    margin: 15px;
+}
+
+// .half-a-border-on-top {
+//     border-top: 2px solid black;
+//     position: relative;
+// }
+
+// .half-a-border-on-top:after {
+//     padding: 0;
+//     margin-bottom: 2px;
+//     content: "";
+//     width: 50%;
+//     height: 1px; /* slight higher to work around rounding errors(?) on some zoom levels in some browsers. */
+//     position: absolute;
+//     right: 0;
+//     top: -1px;
+//     margin-right: 9.735rem;
+//     border-top: 4px solid #a17a69;
+// }
 
 /* Theme/Color palette of the website */
 .custom-theme {
@@ -538,26 +586,6 @@ main::before, main::after {
 .custom-theme .title:before {
     background: #343434;
 }
-
-// .custom-theme .nav-scroll {
-//     background: #181818;
-// }
-
-// .custom-theme .nav-scroll .icon-bar {
-//     color: burlywood;
-// }
-
-// .custom-theme .nav-scroll .navbar-nav .nav-link {
-//     color: #D9D1D1;
-// }
-
-// .custom-theme .nav-scroll .logo {
-//     color: #343434;
-// }
-
-// .custom-theme .nav-scroll .logo:hover {
-//     color: burlywood;
-// }
 
 .custom-theme footer {
     background: #08070A;
@@ -614,8 +642,8 @@ main::before, main::after {
 .page-bg {
     // background: $color-bg;
     // background-blend-mode: screen;
-    // background-size: cover;
-    // filter: grayscale(100%);
+    background-size: cover;
+    filter: grayscale(100%);
     z-index: -1;
 }
   
@@ -684,21 +712,27 @@ main::before, main::after {
     }
 }
   
-
-// .page-wrapper {
-//     text-align: center;
-//     color: #fff;
-//     z-index: 2;
-// }
-
 /* animation */
 #shuffle {
     display: inline-block;
 }
 
 /* responsive */
-@media all and (max-width: 500px) {
+@media all and (max-width: 720px) {
     .experience-page {
         padding: 2em 1em;
     }
+
+    .icon-skills {
+        width: 5.25rem !important;
+        height: 5.25rem !important;
+    }
+
+    .skill-header {
+        margin-right: 0;
+    }
+    
+    // .half-a-border-on-top {
+    //     margin-left: 0;
+    // }
 }
