@@ -28,8 +28,8 @@ $time-4: 200s;
 /* mixins */
 @function particles($max) {
   $val: 0px 0px $color-particle;
-  @for $i from 1 through $max {
-    $val: #{$val}, random($spacing)+px random($spacing)+px $color-particle;
+  @for $i from 0 through $max {
+    $val: #{$val}, random($spacing) + px random($spacing) + px $color-particle;
   }
   @return $val;
 }
@@ -198,44 +198,6 @@ span a:active {
     color: palegoldenrod !important;
 }
 
-// .nav-scroll {
-//     background: #FFE7B8;
-//     border-bottom: 1.5px solid rgba(12, 12, 12, 0.04);
-//     padding: 0;
-//     position: fixed;
-//     top: -100px;
-//     left: 0;
-//     width: 100%;
-//     /* a bit of animation when the screen size is changing */
-//     -webkit-transition: -webkit-transform .5s;
-//     transition: -webkit-transform .5s;
-//     transition: transform .5s ease-in-out;
-//     transition: transform .5s, -webkit-transform .5s;
-//     -webkit-transform: translateY(100px);
-//     transform: translateY(100px);
-// }
-
-// .nav-scroll .icon-bar {
-//     color: #222;
-// }
-
-// .nav-scroll .navbar-nav .nav-link {
-//     color: whitesmoke;
-// }
-
-// .nav-scroll .nav-brand {
-//     padding: 10px 0;
-//     color: #111;
-// }
-
-// .nav-scroll .logo:hover {
-//     color: burlywood;
-// }
-
-// .nav-scroll .navbar-nav .nav-link:hover {
-//     color: burlywood;
-// }
-
 .scrolled-down{
     transform:translateY(-100%); transition: all 0.5s ease-in-out;
 }
@@ -244,13 +206,16 @@ span a:active {
     transform:translateY(0); transition: all 0.5s ease-in-out;
 }
 
-.navbar-nav .nav-item a:hover {
-    color: palegoldenrod !important;
+.nav-item a:hover {
+    // color: palegoldenrod !important;
+    text-decoration: underline 2px #ff9914 !important;
+    padding-top: 2px;
+    transition: 0.125s ease-in 0 ease-out!important;
 }
 
-.nav-item a:link {
-    color: #897B7B !important;
-}
+// .nav-item a:link {
+//     color: #897B7B !important;
+// }
 
 // .nav-item .active { 
 //     color: palegreen;
@@ -522,24 +487,94 @@ main::before, main::after {
     margin-top: 8rem;
     margin-bottom: 3rem;
     justify-content: center;
+    z-index: 3 !important;
 }
 
 .skills-wrapper {
-    border-left: none !important;
-    border-right: none !important;
-    // border: 5px solid;
-    padding: 35px 5px 35px 5px;
-    background: linear-gradient(to left, #ccc 50%, transparent 50%) 100% bottom,
-                linear-gradient(to right, #ccc 50%, transparent 50%) 100% top;
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
-}
+    // border-left: none !important;
+    // border-right: none !important;
+    // // border: 5px solid;
+    // padding: 35px 5px 35px 5px;
+    // background: linear-gradient(to left, #ccc calc(50% + 10px), transparent 50%) 100% bottom,
+    //             linear-gradient(to right, #ccc calc(50% + 10px), transparent 50%) 100% top;
+    // background-repeat: no-repeat;
+    // background-size: 100% 3px;
+    // --b: 5px;   /* thickness of the border */
+    // --c:white;   /* color of the border */
+    // --w: 20px;  /* width of border */
+    
   
+    // padding: var(--b); /* space for the border */   
+    // position:relative;
+    --b: 5px;   /* thickness of the border */
+    --c:white;   /* color of the border */
+    --w: 20px;  /* width of border */
+    
+  
+    border: var(--b) solid transparent; /* space for the border */
+    --g:#0000 90deg,var(--c) 0;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+    background-size: var(--w) var(--w);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    padding-bottom: 35px;
+}
+
+// .skills-wrapper::before {
+//     content:"";
+//     position:absolute;
+//     top:0;
+//     left:0;
+//     right:0;
+//     bottom:0;
+//     background:var(--c, white);
+//     --g:#0000 90deg,#000 0;
+//     -webkit-mask:
+//       conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
+//       conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
+//       conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+//       conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+//     -webkit-mask-size:var(--w) var(--w);
+//     background-origin:border-box;
+//     -webkit-mask-repeat:no-repeat;
+//     mask:
+//       conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
+//       conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
+//       conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+//       conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+//     mask-size:var(--w) var(--w);
+//     mask-repeat:no-repeat;
+// }
+
 .skill-header {
-    padding-bottom: 0 !important;
+    padding: 30px 0 15px !important;
+    font-weight: bold;
+    position: relative;
     margin-bottom: 1rem !important;
-    margin-right: 40rem;
-    // margin-top: 5rem;
+    margin-right: 42rem;
+}
+
+.skill-header::after {
+    // content: "";
+    // position: absolute;
+    // left: 31%;
+    // bottom: 16px;
+    // width: 150px;
+    // height: 14px;
+    // transform: skew(-12deg) translateX(-50%) !important;
+    // background: rgba(238,111,87,0.5);
+    // z-index: -1;
+    content: "";
+    display: block;
+    width: 160px;
+    padding-top: 3px;
+    border-bottom: 3.5px solid #f9dd94;
+    position: absolute;
+    left: 31.5%;
 }
 
 .skills-wrapper img {
@@ -557,6 +592,11 @@ main::before, main::after {
     box-shadow: 0 3px 10px #a17a69;
     padding: 60px;
     margin: 15px;
+}
+
+#tech {
+    margin-right: 0;
+    margin-left: 40.25rem;
 }
 
 // .half-a-border-on-top {
@@ -644,7 +684,7 @@ main::before, main::after {
     // background-blend-mode: screen;
     background-size: cover;
     filter: grayscale(100%);
-    z-index: -1;
+    z-index: -2;
 }
   
 .particle, .particle:after {
@@ -724,12 +764,16 @@ main::before, main::after {
     }
 
     .icon-skills {
-        width: 5.25rem !important;
-        height: 5.25rem !important;
+        width: 5rem !important;
+        height: 5rem !important;
     }
 
     .skill-header {
         margin-right: 0;
+    }
+
+    #tech {
+        margin-left: 0;
     }
     
     // .half-a-border-on-top {
