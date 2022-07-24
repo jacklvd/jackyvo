@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     el_autohide = document.querySelector('.autohide');
     
-    // add padding-top to bady (if necessary)
+    // add padding-top to body (if necessary)
     navbar_height = document.querySelector('.navbar').offsetHeight;
     document.body.style.paddingTop = navbar_height + 'px';
   
@@ -29,3 +29,9 @@ document.addEventListener("DOMContentLoaded", function(){
   
   }); 
   // DOMContentLoaded  end
+
+// tooltip part 
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})  
