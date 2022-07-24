@@ -16,7 +16,7 @@
 */
 
 
-/* Config */
+/*--------------------- Config ----------------------*/
 $color-bg: #2C3759;
 $color-particle: #fff;
 $spacing: 2560px;
@@ -39,7 +39,7 @@ $time-4: 200s;
   border-radius: 50%;
 }
 
-/* General set-up */
+/*-------------------- General set-up -------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -77,10 +77,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden !important; /* if the content in the nav box is too large consider adding a scroll bar */
     height: 100%;
+    width: 100%;
 }
 
-
-/* Header Format */
+/*------------------ Header Format ----------------*/
 hr {
     position: relative;
 }
@@ -169,7 +169,7 @@ span a:active {
 
 
 
-/* NavBar */
+/*------------------- NavBar --------------------*/
 .navbar {
     position: absolute;
     left: 0;
@@ -238,7 +238,8 @@ span a:active {
 }
 
 
-/* About Me Section */
+/*-------------------- About Me Section ---------------------- */
+
 img {
     max-width: 100%;
     height: auto;
@@ -321,9 +322,9 @@ img {
     margin-top: 30px;
 }
 
-// .self .button-grp {
-//     display: inline-block;
-// }
+.self .content .title {
+    margin-left: 16rem;
+}
 
 .self button {
     // display: inline-block;
@@ -355,7 +356,7 @@ img {
 }
 
 
-/* Experiences */
+/*------------------------- Experiences --------------------------*/
 
 main::before, main::after {
     position: inherit;
@@ -368,7 +369,7 @@ main::before, main::after {
     color: #ebebeb;
     font-size: 1em;
     font-family: 'Lato', sans-serif;
-    padding: 35px;
+    padding: 35px 0 60px 0;
 }
 
 .experience-page span {
@@ -457,29 +458,177 @@ main::before, main::after {
     margin: 0;
     padding-bottom: 2em;
     padding: 0 0 2em 1em;
-    list-style-image: url(../img/angle-right.svg); /* why this one not working T_T */
+    // list-style-image: url(../img/arrow-forward-outline.svg) !important; /* why this one not working T_T */
+}
+
+.experience-timeline-details li {
+    list-style-image: url(../img/return-down-forward-outline.svg) !important; /* why this one not working T_T */
+}
+
+.experience-timeline-details li::marker {
+    font-size: 1.5rem;
 }
   
 .experience-timeline-details-item {
     margin-bottom: 0.5em;
 } 
 
+/*----------------------- Projects Section----------------------  */
 
+.projects {
+    background-color: #2d2a32;
+    padding-top: 65px;
+    padding-bottom: 130px;
+    margin-bottom: 8rem;
+    height: 100%;
+}
+  
+.project-pic {
+    width: 75%;
+    height: 65%;
+}
+  
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* footer - format */
-.footer {
-    padding: 90px 10px 0px 10px; 
+.projects .title {
+    margin-left: 33%;
+    margin-bottom: 1rem;
+}
+  
+.project-container {
     text-align: center;
-    left: 0;
+    width: 22.875rem;
+    height: 100%;
+    padding: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.project-container p {
+    padding: 0.4rem;
+}
+  
+.project-title {
+    margin-bottom: 2;
+}
+  
+.project-details {
+    margin-bottom: 0.5;
+}
+  
+.project-card {
+    background-color: #37505C;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px black;
+    padding: 20px;
+    margin: 10px;
+}
+
+.projects-container .project-container .hover-items {
     width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
 }
 
-.footer p {
-    font-size: 18px;
-    font-weight: 500;
+.projects-container .project-container .hover-items h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+  
+.projects-container .project-container .hover-items .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.projects-container .project-container .hover-items .icons .icon-project {
+    background-color: #cbc5ea;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+  
+.projects-container .project-container .hover-items .icons .icon-project i {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 1rem;
 }
 
-// skills section
+.projects-container .project-container .hover-items a {
+    text-decoration: none;
+}
+  
+.projects-container .project-container .hover-items .icons .icon-project:hover {
+    background-color: yellowgreen;
+}
+  
+.projects-container .project-container .hover-items .icons .icon-project:hover i {
+    color: #355290;
+}
+  
+.project-container:hover .hover-items {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.project-container:hover .image {
+    opacity: 0.3;
+}
+  
+.project-container:hover .middle {
+    opacity: 1;
+}
+  
+.text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/*----------------------- Skills section -----------------------*/
+
 .skills {
     max-width: 68.75rem;
     margin: auto;
@@ -503,21 +652,21 @@ main::before, main::after {
     // --c:white;   /* color of the border */
     // --w: 20px;  /* width of border */
     
-  
+    
     // padding: var(--b); /* space for the border */   
     // position:relative;
     --b: 5px;   /* thickness of the border */
     --c:white;   /* color of the border */
     --w: 20px;  /* width of border */
     
-  
+    
     border: var(--b) solid transparent; /* space for the border */
     --g:#0000 90deg,var(--c) 0;
     background:
-      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
-      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
-      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
-      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
     background-size: var(--w) var(--w);
     background-origin: border-box;
     background-repeat: no-repeat;
@@ -525,31 +674,31 @@ main::before, main::after {
 }
 
 // .skills-wrapper::before {
-//     content:"";
-//     position:absolute;
-//     top:0;
-//     left:0;
-//     right:0;
-//     bottom:0;
-//     background:var(--c, white);
-//     --g:#0000 90deg,#000 0;
-//     -webkit-mask:
-//       conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
-//       conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
-//       conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
-//       conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
-//     -webkit-mask-size:var(--w) var(--w);
-//     background-origin:border-box;
-//     -webkit-mask-repeat:no-repeat;
-//     mask:
-//       conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
-//       conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
-//       conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
-//       conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
-//     mask-size:var(--w) var(--w);
-//     mask-repeat:no-repeat;
-// }
-
+    //     content:"";
+    //     position:absolute;
+    //     top:0;
+    //     left:0;
+    //     right:0;
+    //     bottom:0;
+    //     background:var(--c, white);
+    //     --g:#0000 90deg,#000 0;
+    //     -webkit-mask:
+    //       conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
+    //       conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
+    //       conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+    //       conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+    //     -webkit-mask-size:var(--w) var(--w);
+    //     background-origin:border-box;
+    //     -webkit-mask-repeat:no-repeat;
+    //     mask:
+    //       conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
+    //       conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
+    //       conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+    //       conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+    //     mask-size:var(--w) var(--w);
+    //     mask-repeat:no-repeat;
+    // }
+    
 .skill-header {
     padding: 30px 0 15px !important;
     font-weight: bold;
@@ -559,15 +708,6 @@ main::before, main::after {
 }
 
 .skill-header::after {
-    // content: "";
-    // position: absolute;
-    // left: 31%;
-    // bottom: 16px;
-    // width: 150px;
-    // height: 14px;
-    // transform: skew(-12deg) translateX(-50%) !important;
-    // background: rgba(238,111,87,0.5);
-    // z-index: -1;
     content: "";
     display: block;
     width: 160px;
@@ -580,7 +720,7 @@ main::before, main::after {
 .skills-wrapper img {
     padding: 1.5rem;
 }
-  
+
 .icon-skills {
     width: 9.75rem;
     height: 9.75rem;
@@ -599,25 +739,21 @@ main::before, main::after {
     margin-left: 40.25rem;
 }
 
-// .half-a-border-on-top {
-//     border-top: 2px solid black;
-//     position: relative;
-// }
 
-// .half-a-border-on-top:after {
-//     padding: 0;
-//     margin-bottom: 2px;
-//     content: "";
-//     width: 50%;
-//     height: 1px; /* slight higher to work around rounding errors(?) on some zoom levels in some browsers. */
-//     position: absolute;
-//     right: 0;
-//     top: -1px;
-//     margin-right: 9.735rem;
-//     border-top: 4px solid #a17a69;
-// }
+/*------------------- Footer ------------------*/
+.footer {
+    padding: 90px 10px 0px 10px; 
+    text-align: center;
+    left: 0;
+    width: 100%;
+}
 
-/* Theme/Color palette of the website */
+.footer p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/*---------------- Theme/Color palette of the website ----------------*/
 .custom-theme {
     background-color: #08070A;
     color: whitesmoke;
@@ -664,7 +800,6 @@ main::before, main::after {
 .title-left {
     text-align: left;
     margin-bottom: 20px;
-    // justify-content: center !important;
 }
 
 .title-left:after {
@@ -752,13 +887,32 @@ main::before, main::after {
     }
 }
   
-/* animation */
+/*-------------- Animation ---------------*/
 #shuffle {
     display: inline-block;
 }
 
-/* responsive */
-@media all and (max-width: 720px) {
+/*--------------------- Responsive ------------------------*/
+@media all and (max-width: 990px) {
+    .icon-skills {
+        width: 5.875rem !important;
+        height: 5.875rem !important;
+    }
+
+    .skill-header {
+        margin-right: 0;
+    }
+
+    .self .content .title {
+        margin-left: 0;
+    }
+
+    #tech {
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 768px) {
     .experience-page {
         padding: 2em 1em;
     }
@@ -770,6 +924,29 @@ main::before, main::after {
 
     .skill-header {
         margin-right: 0;
+    }
+
+    .self .content .title {
+        margin-left: 0;
+    }
+
+    #tech {
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .icon-skills {
+        width: 3.725rem !important;
+        height: 3.725rem !important;
+    }
+
+    .skill-header {
+        margin-right: 0;
+    }
+
+    .self .content .title {
+        margin-left: 0;
     }
 
     #tech {
