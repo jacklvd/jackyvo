@@ -1,4 +1,5 @@
-@import url('href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700|Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,700|Taviraj');
 
 /* Table of content of CSS Page
     1. Config and Variables
@@ -33,10 +34,11 @@
     --theme-color8: #133846;
     --theme-color9: #2d2a32;
     --theme-color10: #2d2a32;
-    --theme-color11: #515C67;
+    --theme-color11: #343330;
     --theme-color12: #2d2d2d;
+    --theme-color13: #121019;
     --frontcard-color: #e4ff1a;
-    --backcard-color: #70cdff;
+    --backcard-color: #033860;
     --border-color: #AEDFF2;
 }
 
@@ -107,7 +109,7 @@ hr {
 
 .header {
     min-height: 100vh;
-    background: linear-gradient(-45deg, var(--theme-color5), var(--theme-color1), #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, var(--theme-color5), var(--theme-color1), var(--theme-color8), #23d5ab);
     background-size: 400% 400%;
     animation: gradient 12s ease infinite;
 }
@@ -129,12 +131,12 @@ hr {
 }
 
 .header .caption h2 {
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .header .caption h1 {
     margin: 10px 0;
-    font-size: 70px;
+    font-size: 90px;
 }
 
 .flip-card-container {
@@ -164,7 +166,7 @@ hr {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    font-weight: 900;
+    font-weight: bold;
     backface-visibility: hidden;
     font-family: var(--font-flipcard);
 }
@@ -272,6 +274,13 @@ img {
     height: auto;
 }
 
+.self {
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, var(--theme-color3); /* Old browsers */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -moz-linear-gradient(top,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* FF3.6-15 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -webkit-linear-gradient(top,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* Chrome10-25,Safari5.1-6 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, linear-gradient(to bottom,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 .self .self-img {
     padding: 0 20px 0 0;
     position: relative;
@@ -294,7 +303,7 @@ img {
 
 .self .self-img:after {
     content: '';
-    background: var(--theme-color3);
+    background: var(--theme-color13);
     position: absolute;
     left: 15px;
     right: 5px;
@@ -395,6 +404,11 @@ main::before, main::after {
     font-size: 1em;
     font-family: var(--font-custom2);
     padding: 35px 0 60px 0;
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, var(--theme-color13); /* Old browsers */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -moz-linear-gradient(top,  var(--theme-color10) 0%, var(--theme-color13) 100%); /* FF3.6-15 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -webkit-linear-gradient(top,  var(--theme-color10) 0%, var(--theme-color13) 100%); /* Chrome10-25,Safari5.1-6 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, linear-gradient(to bottom,  var(--theme-color10) 0%, var(--theme-color13) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 }
 
 .experience-page span {
@@ -502,7 +516,10 @@ main::before, main::after {
 /*----------------------- Projects Section----------------------  */
 
 .projects {
-    background-color: var(--theme-color9);
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, var(--theme-color3); /* Old browsers */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -moz-linear-gradient(top,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* FF3.6-15 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -webkit-linear-gradient(top,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* Chrome10-25,Safari5.1-6 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, linear-gradient(to bottom,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     padding-top: 5.5em;
     padding-bottom: 130px;
     height: 100%;
@@ -520,6 +537,7 @@ main::before, main::after {
 }
 
 .projects .title {
+    font-size: 60px;
     margin-bottom: 2rem;
 }
   
@@ -665,9 +683,16 @@ main::before, main::after {
     text-align: center;
     justify-content: center;
     z-index: 3 !important;
-    background-color: #16262e;
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, var(--theme-color13); /* Old browsers */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -moz-linear-gradient(top,  var(--theme-color10) 0%, var(--theme-color13) 100%); /* FF3.6-15 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -webkit-linear-gradient(top,  var(--theme-color10) 0%, var(--theme-color13) 100%); /* Chrome10-25,Safari5.1-6 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, linear-gradient(to bottom,  var(--theme-color10) 0%, var(--theme-color13) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     padding-top: 3.75rem;
     padding-bottom: 5rem;
+}
+
+.skills .title {
+    font-size: 60px;
 }
 
 .skills-wrapper {
@@ -736,6 +761,7 @@ main::before, main::after {
     position: relative;
     margin-bottom: 1rem !important;
     margin-right: 42rem;
+    font-family: var(--font-custom2);
 }
 
 .skill-header::after {
@@ -758,7 +784,7 @@ main::before, main::after {
 }
 
 .icon-card {
-    background-color: var(--theme-color3);
+    background-color: var(--theme-color13);
     border-radius: 11px;
     box-shadow: 0 3px 10px var(--theme-color6);
     padding: 30px;
@@ -773,9 +799,16 @@ main::before, main::after {
 /* ------------------- Contact ------------------ */
 
 .contact {
-    background-color: var(--theme-color11);
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, var(--theme-color3); /* Old browsers */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -moz-linear-gradient(to top,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* FF3.6-15 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, -webkit-linear-gradient(to top,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* Chrome10-25,Safari5.1-6 */
+    background:url(https://www.transparenttextures.com/patterns/arches.png) repeat, linear-gradient(to bottom,  var(--theme-color3) 0%, var(--theme-color13) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     padding-top: 4em;
     padding-bottom: 2.5em;
+}
+
+.contact .title {
+    font-size: 60px;
 }
 
 .contact p {
@@ -884,7 +917,7 @@ input[type=checkbox]:checked + label {
 /*------------------- Footer ------------------*/
 
 .footer {
-    padding: 90px 10px 0px 0px; 
+    padding: 90px 10px 5px 0px; 
     text-align: center;
     justify-content: center;
     justify-self: center;
@@ -893,13 +926,13 @@ input[type=checkbox]:checked + label {
 }
 
 .footer p {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
 }
 
 .footer a {
     text-decoration: none !important;
-    color: var(--theme-color11);
+    color: var(--theme-color2);
 }
 
 .footer a:hover {
@@ -918,7 +951,8 @@ input[type=checkbox]:checked + label {
 }
 
 .custom-theme footer {
-    background: var(--theme-color3);
+    background: var(--theme-color7);
+    color: var(--theme-color2);
 }
 
 .title {
@@ -963,6 +997,7 @@ input[type=checkbox]:checked + label {
 
 #shuffle {
     display: inline-block;
+    font-family: var(--font-custom2);
 }
 
 
