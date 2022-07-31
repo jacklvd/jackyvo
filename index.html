@@ -45,19 +45,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home" data-bs-target="#home" aria-controls="home" aria-checked="true">Home</a>
+                            <a class="nav-link active" href="#home" data-bs-target="#home" aria-controls="home" role="button" aria-checked="true">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about" data-bs-target="#about" aria-controls="about" aria-checked="false">About</a>
+                            <a class="nav-link" href="#about" data-bs-target="#about" aria-controls="about" role="button" aria-checked="false">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects" data-bs-target="#projects" aria-controls="projects" aria-checked="false">Projects</a>
+                            <a class="nav-link" href="#projects" data-bs-target="#projects" aria-controls="projects" role="button" aria-checked="false">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#skills" data-bs-target="#skills" aria-controls="skills" aria-checked="false">Skills</a>
+                            <a class="nav-link" href="#skills" data-bs-target="#skills" aria-controls="skills" role="button" aria-checked="false">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact" data-bs-target="#contact" aria-controls="contact" aria-checked="false">Contact</a>
+                            <a class="nav-link" href="#contact" data-bs-target="#contact" aria-controls="contact" role="button" aria-checked="false">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -146,7 +146,7 @@
                                 <button type="button" class="btn btn-sm me-4" value="mail" onclick="javascript:window.open('mailto:volg@mail.uc.edu', '_blank')">Let's Talk</button>
                                 <button type="button" class="btn btn-sm me-4" value="resume" onclick="javascript:window.open('./assets/resume/Vo_Long_CSCoopResume.pdf', '_blank')">Resume</button>
                             </div><br>
-                            <iframe style="border-radius:15px" src="https://open.spotify.com/embed/track/1414JOjlKK8tf2RuiweqYw?utm_source=generator&theme=0" width="100%" height="80" style="border:0;" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <iframe style="border-radius:15px; border:0;" src="https://open.spotify.com/embed/track/1414JOjlKK8tf2RuiweqYw?utm_source=generator&theme=0" width="100%" height="80" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                         </div>
                     </div>
                 </div>
@@ -210,11 +210,7 @@
                 </div>
                 <div class="projects-container">
                     <div class="project-container project-card">
-                        <img
-                        src="assets/img/my_shelf.png"
-                        alt="expense-tracker"
-                        loading="lazy"
-                        class="project-pic" style="width: 75%;"
+                        <img src="assets/img/my_shelf.png" alt="myshelf-web" loading="lazy" class="project-pic" style="width: 75%;"
                         />
                         <h3 class="project-title">My Shelf</h3>
                         <p class="project-details">
@@ -237,12 +233,7 @@
                         </div>
                     </div>
                     <div class="project-container project-card">
-                        <img
-                        src="assets/img/weather.png"
-                        alt="expense-tracker"
-                        loading="lazy"
-                        class="project-pic"
-                        />
+                        <img src="assets/img/weather.png" alt="weather-app" loading="lazy" class="project-pic"/>
                         <h3 class="project-title">Weather App</h3>
                         <p class="project-details">
                         A weather app constructed with Python as main language 
@@ -263,14 +254,10 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Currently I don't think my flappy bird project is a good way to show my skills so I decide to hidden it -->
                     <!-- <div class="project-container project-card">
-                        <img
-                        src="assets/img/ProjectManagement.jpg"
-                        alt="expense-tracker"
-                        loading="lazy"
-                        class="project-pic"
-                        />
-                        <h3 class="project-title">Expense Tracker</h3>
+                        <img src="assets/img/ProjectManagement.jpg" alt="flappy-bird" loading="lazy" class="project-pic"/>
+                        <h3 class="project-title">Flappy Bird</h3>
                         <p class="project-details">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
                         ratione vel inventore labore commodi modi quos culpa aut saepe!
@@ -302,6 +289,7 @@
                 <div class="section-head full-width">
                     <h4 class="title">Technical Skills <span class="icon fas fa-laptop-code"></span></h4>
                 </div>
+
                 <div class="skills-wrapper" style="--c:white;--w:calc(30% - 10px);--b:4px">
                     <h2 class="skill-header">Back End - Front End</h2>
                     <div class="first-set animate__animated animate__pulse">
@@ -333,6 +321,7 @@
                             src="./assets/icons/icons8-figma.svg" alt="" loading="lazy" class="icon-skills icon-card" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Figma - Familiar"
                         />  
                     </div>
+
                     <div class="third-set animate__animated animate__pulse">
                         <img
                             src="./assets/icons/icons8-python.svg" alt="" loading="lazy" class="icon-skills icon-card" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Python - Proficiency"
@@ -348,6 +337,7 @@
                         />                        
                     </div>
                 </div>
+
                 <div class="skills-wrapper container" style="margin-top: 4rem; --c:white;--w:calc(30% - 10px);--b:4px;">
                     <h2 class="skill-header" id="tech">Software - Technology</h2>
                     <div class="first-set animate__animated animate__pulse">
@@ -426,7 +416,7 @@
                 </div>
             </div>
         </section>
-        <!------------------ End of Contact -------------------->
+        <!-- ---------------- End of Contact ------------------ -->
 
         
         <!-- ------------------ Footer ------------------------- -->
