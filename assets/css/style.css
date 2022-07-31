@@ -20,7 +20,7 @@
   --font-custom2: "Lato", sans-serif;
   --font-flipcard: "Courier New", Courier, monospace;
   --body-color: #333;
-  --theme-color1: black;
+  --theme-color1: #08070A;
   --theme-color2: #FFFBFB;
   --theme-color3: #201B17;
   --theme-color4: #D2AE90;
@@ -209,10 +209,6 @@ span i {
   background: transparent;
   font-family: var(--font-custom2);
   z-index: 9;
-}
-
-.navbar .icon-bar {
-  color: var(--theme-color2);
 }
 
 .navbar .navbar-nav .nav-link {
@@ -691,7 +687,7 @@ img {
 }
 
 .skills-wrapper img {
-  padding: 1.5rem;
+  padding: 1.7rem;
 }
 
 .icon-skills {
