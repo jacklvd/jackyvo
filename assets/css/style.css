@@ -213,6 +213,7 @@ span a:active {
   top: 0;
   width: 100%;
   background: transparent;
+  font-family: var(--font-custom2);
   z-index: 9;
 }
 
@@ -258,7 +259,7 @@ span a:active {
 .logo {
   padding: 18px 0;
   width: 90px;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--theme-color2);
 }
@@ -311,7 +312,7 @@ img {
 }
 
 .self h4 {
-  font-family: var(--font-custom);
+  font-family: var(--font-custom2);
 }
 
 .self .content {
@@ -838,7 +839,7 @@ input[type=checkbox]:checked + label {
 
 /*------------------- Footer ------------------*/
 .footer {
-  padding: 90px 10px 5px 0px;
+  padding: 80px 10px 5px 0px;
   text-align: center;
   justify-content: center;
   justify-self: center;
