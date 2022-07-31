@@ -481,15 +481,16 @@ main::before, main::after {
     color: var(--theme-color2);
     font-style: italic;
     text-transform: uppercase;
+    font-family: var(--font-family);
 }
   
 .experience-timeline-heading-location {
-    font-size: 0.9em;
+    font-size: 1em;
 }
   
 .experience-timeline-heading-duration {
     display: block;
-    font-size: 0.8em;
+    font-size: 0.825em;
     color: var(--theme-color4);
 }
   
@@ -498,11 +499,12 @@ main::before, main::after {
     margin: 0;
     padding-bottom: 2em;
     padding: 0 0 2em 1em;
-    // list-style-image: url(../img/arrow-forward-outline.svg) !important; /* why this one not working T_T */
+    font-family: var(--font-custom2);
+    font-size: 16px;
 }
 
 .experience-timeline-details li {
-    list-style-image: url(../img/return-down-forward-outline.svg) !important; /* why this one not working T_T */
+    list-style-image: url(../img/return-down-forward-outline.svg) !important;
 }
 
 .experience-timeline-details li::marker {
