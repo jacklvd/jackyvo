@@ -30,7 +30,7 @@
 
     <body class="custom-theme"  data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" tabindex="0">
 
-        <!------------------------ Navbar ----------------------->
+        <!-- ---------------------- Navbar --------------------- -->
 
         <nav class="autohide navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#08070A">
             <!-- logo -->
@@ -45,28 +45,28 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home" data-bs-target="#home" type="button" aria-controls="home" aria-selected="true">Home</a>
+                            <a class="nav-link active" href="#home" data-bs-target="#home" aria-controls="home" aria-checked="true">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about" data-bs-target="#about" type="button" aria-controls="about" aria-selected="false">About</a>
+                            <a class="nav-link" href="#about" data-bs-target="#about" aria-controls="about" aria-checked="false">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects" data-bs-target="#projects" type="button" aria-controls="projects" aria-selected="false">Projects</a>
+                            <a class="nav-link" href="#projects" data-bs-target="#projects" aria-controls="projects" aria-checked="false">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#skills" data-bs-target="#skills" 4type="button" aria-controls="skills" aria-selected="false">Skills</a>
+                            <a class="nav-link" href="#skills" data-bs-target="#skills" aria-controls="skills" aria-checked="false">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact" data-bs-target="#contact" type="button" aria-controls="contact" aria-selected="false">Contact</a>
+                            <a class="nav-link" href="#contact" data-bs-target="#contact" aria-controls="contact" aria-checked="false">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!------------------------- End of Navbar ----------------------------->
+        <!-- ----------------------- End of Navbar --------------------------- -->
         
 
-        <!------------------------------ Header ------------------------------->
+        <!-- ---------------------------- Header ----------------------------- -->
 
         <header class="header" data-stellar-background-ratio="0.5" style="padding-top: 30vh;" id="home">
             <div class="container">
@@ -79,34 +79,34 @@
                         <br>
                         <hr>
                         <div class="btn-group my-class d-flex align-items-center justify-content-center flex-wrap px-2">
-                            <button class="flip-card-container" type="button">
+                            <button class="flip-card-container" type="button" value="linkedin" onclick="javascript:window.open('https://www.linkedin.com/in/longv3312/', '_blank')">
                                 <div class="flip-card">
                                     <span class="flip-card-front" id="white1">LINKEDIN</span>
-                                    <span class="flip-card-back" id="white2"><a href="https://www.linkedin.com/in/longv3312/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></span>
+                                    <span class="flip-card-back" id="white2"><i class="fa-brands fa-linkedin-in"></i></span>
                                 </div>
                             </button>
-                            <button class="flip-card-container" type="button">
+                            <button class="flip-card-container" type="button" value="github" onclick="javascript:window.open('https://github.com/jacklvd', '_blank')">
                                 <div class="flip-card">
                                     <span class="flip-card-front">GITHUB</span>
-                                    <span class="flip-card-back"><a href="https://github.com/jacklvd" target="_blank"><i class="fa-brands fa-github"></i></a></span>
+                                    <span class="flip-card-back"><i class="fa-brands fa-github"></i></span>
                                 </div>
                             </button>
-                            <button class="flip-card-container" type="button">
+                            <button class="flip-card-container" type="button" value="mail" onclick="javascript:window.open('mailto:volg@mail.uc.edu', '_blank')">
                                 <div class="flip-card">
                                     <span class="flip-card-front" id="white3">MAIL</span>
-                                    <span class="flip-card-back" id="white4"><a href="mailto:volg@mail.uc.edu"><i class="fa-solid fa-envelope-open"></i></a></span>
+                                    <span class="flip-card-back" id="white4"><i class="fa-solid fa-envelope-open"></i></span>
                                 </div>
                             </button>
-                            <button class="flip-card-container" type="button">
+                            <button class="flip-card-container" type="button" value="instagram" onclick="javascript:window.open('https://www.instagram.com/jacklvd_/', '_blank')">
                                 <div class="flip-card">
                                     <span class="flip-card-front">INSTAGRAM</span>
-                                    <span class="flip-card-back"><a href="https://www.instagram.com/jacklvd_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></span>
+                                    <span class="flip-card-back"><i class="fa-brands fa-instagram"></i></span>
                                 </div>
                             </button>
-                            <button class="flip-card-container" type="button">
+                            <button class="flip-card-container" type="button" value="hackerrank" onclick="javascript:window.open('https://www.hackerrank.com/jlvd32', '_blank')">
                                 <div class="flip-card">
                                     <span class="flip-card-front" id="white5">HACKERRANK</span>
-                                    <span class="flip-card-back" id="white6"><a href="https://www.hackerrank.com/jlvd32" target="_blank"><i class="fa-brands fa-hackerrank"></i></i></a></span>
+                                    <span class="flip-card-back" id="white6"><i class="fa-brands fa-hackerrank"></i></span>
                                 </div>
                             </button>
                         </div>
@@ -117,7 +117,7 @@
         <!-- End of Header -->
 
 
-        <!--------------------------------- About Section --------------------------------->
+        <!-- ------------------------------- About Section ------------------------------- -->
 
         <section class="self section-padding" id="about" data-stellar-background-ratio="0.5">
             <div class="container">
@@ -129,7 +129,7 @@
                     </div>
                     <div class="col-lg-7">
                         <div class="content">
-                            <h4 class="title">About Me <!--<span class="fa-solid fa-thumbs-up">--></span></h4>
+                            <h4 class="title">About Me <!-- <span class="fa-solid fa-thumbs-up"> </span> --></h4>
                             <p>I am <span>Jack Vo</span>, a rising junior at University of Cincinnati, OH, United States, major in Computer Science with a minor in Business Analysis. I am open to contribute to any
                             projects as well as looking for internship opportunities.</p>
                             <p><span>Somethings of Me:</span></p>
@@ -143,10 +143,10 @@
                                 •	Currently, I am learning about Django, SQL as well as sharpen my Python knowledge.<br>
                             </p><br>
                             <div class="btn-group d-flex justify-content-center rounded-pill">
-                                <button type="button" class="btn btn-sm me-4"><a href="mailto:volg@mail.uc.edu">Let's Talk</a></button>
-                                <button type="button" class="btn btn-sm me-4"><a href="./assets/resume/Vo_Long_CSCoopResume.pdf" target="_blank">Resume</a></button>
+                                <button type="button" class="btn btn-sm me-4" value="mail" onclick="javascript:window.open('mailto:volg@mail.uc.edu', '_blank')">Let's Talk</button>
+                                <button type="button" class="btn btn-sm me-4" value="resume" onclick="javascript:window.open('./assets/resume/Vo_Long_CSCoopResume.pdf', '_blank')">Resume</button>
                             </div><br>
-                            <iframe style="border-radius:15px" src="https://open.spotify.com/embed/track/1414JOjlKK8tf2RuiweqYw?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <iframe style="border-radius:15px" src="https://open.spotify.com/embed/track/1414JOjlKK8tf2RuiweqYw?utm_source=generator&theme=0" width="100%" height="80" style="border:0;" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                         </div>
                     </div>
                 </div>
@@ -289,8 +289,8 @@
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </div>
-                        </div> -->
-                    </div>                                        
+                        </div>
+                    </div>                                         -->
                 </div>                
             </div>
         </section>

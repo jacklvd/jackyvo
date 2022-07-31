@@ -192,21 +192,10 @@ hr {
     color: var(--frontcard-color);
 }
 
-span a:link {
-    color: var(--theme-color1);
-    text-decoration: none;
+span i {
+    color: var(--theme-color13);
+    font-size: 18px;
 }
-
-span a:visited {
-    color: var(--theme-color1);
-    text-decoration: none;
-}
-
-span a:active {
-    color: var(--theme-color1);
-    text-decoration: none;
-}
-
 
 
 /*------------------- NavBar --------------------*/
@@ -370,29 +359,24 @@ img {
 .self button {
     // display: inline-block;
     background: var(--theme-color7);
-    color: var(--theme-color8);
     text-decoration: none !important;
     border: 2px solid transparent;
     border-collapse: separate;
     font-weight: bold;
+    font-size: 15px;
     padding: 6px 3px !important;
-    font-size: medium;
     border-radius: 20px 20px !important;
     transition: .4s;
     z-index: 2 !important;
     position: absolute;
+    color: var(--theme-color4);
 }
 
 .self button:hover {
-    // background: transparent;
+    background: transparent;
     border: 3px solid var(--border-color);
+    color: var(--theme-color2);
     cursor: pointer;
-    z-index: 2;
-}
-
-.self button a {
-    text-decoration: none;
-    color: var(--theme-color4);
     z-index: 2;
 }
 
@@ -856,6 +840,7 @@ textarea {
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
     0 1px 1px 0 rgba(0,0,0,0.09);
     border: 3px solid var(--backcard-color);
+    color: var(--theme-color2);
 }
 
 input[type=checkbox] + label {
