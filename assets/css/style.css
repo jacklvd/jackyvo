@@ -36,6 +36,10 @@
   --frontcard-color: #e4ff1a;
   --backcard-color: #033860;
   --border-color: #AEDFF2;
+  --b: 5px; /* thickness of the border */
+  --c:var(--theme-color2); /* color of the border */
+  --w: 20px; /* width of border */
+  --g:#0000 90deg,var(--c) 0;
 }
 
 /*-------------------- General set-up -------------------*/
@@ -386,10 +390,6 @@ img {
 }
 
 /*------------------------- Experiences --------------------------*/
-main::before, main::after {
-  position: inherit;
-}
-
 .experience-page {
   margin: 0 auto;
   color: var(--theme-color2);
@@ -416,8 +416,7 @@ main::before, main::after {
   text-transform: uppercase;
 }
 
-/* Grid
-*************************************************** */
+/* Grid */
 .experience-grid {
   display: table;
 }
@@ -678,11 +677,7 @@ main::before, main::after {
 }
 
 .skills-wrapper {
-  --b: 5px; /* thickness of the border */
-  --c:var(--theme-color2); /* color of the border */
-  --w: 20px; /* width of border */
   border: var(--b) solid transparent; /* space for the border */
-  --g:#0000 90deg,var(--c) 0;
   background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--g)) 0 0, conic-gradient(from 180deg at top var(--b) right var(--b), var(--g)) 100% 0, conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--g)) 0 100%, conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--g)) 100% 100%;
   background-size: var(--w) var(--w);
   background-origin: border-box;
